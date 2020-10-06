@@ -157,32 +157,32 @@
             <div class="progressBar_progressBar_group__3zJF-">
                 <div class="progressBar_progressBar__18WlE">
                     <div class="progressBar_battery__2TZRX progressBar_battery_dark__3N_jI">
+                        <div class="progressBar_percentage__32Zhp progressBar_percentage_dark__p8Zjq" id="dayBar" style="width: 1%;"></div>
+                    </div>
+                    <p class="progressBar_progressText__1A3fz progressBar_progressText_dark__2rXAc" id="dayText">Day: 0%</p>
+                </div>               
+                <div class="progressBar_progressBar__18WlE">
+                    <div class="progressBar_battery__2TZRX progressBar_battery_dark__3N_jI">
+                        <div class="progressBar_percentage__32Zhp progressBar_percentage_dark__p8Zjq" id="monthBar" style="width: 0%;"></div>
+                    </div>
+                    <p class="progressBar_progressText__1A3fz progressBar_progressText_dark__2rXAc" id="monthText">Month: 0%</p>
+                </div>                
+                <div class="progressBar_progressBar__18WlE">
+                    <div class="progressBar_battery__2TZRX progressBar_battery_dark__3N_jI">
                         <div class="progressBar_percentage__32Zhp progressBar_percentage_dark__p8Zjq" id="yearBar" style="width: 0%;"></div>
                     </div>
                     <p class="progressBar_progressText__1A3fz progressBar_progressText_dark__2rXAc" id="yearText">Year: 0%</p>
                 </div>
+                
                 <div class="progressBar_progressBar__18WlE">
                     <div class="progressBar_battery__2TZRX progressBar_battery_dark__3N_jI">
-                        <div class="progressBar_percentage__32Zhp progressBar_percentage_dark__p8Zjq" id="semesterBar" style="width: 0%;"></div>
+                        <div class="progressBar_percentage__32Zhp progressBar_percentage_dark__p8Zjq" id="lifeBar" style="width: 0%;"></div>
                     </div>
-                    <p class="progressBar_progressText__1A3fz progressBar_progressText_dark__2rXAc" id="semesterText">Semester: 0%</p>
-                </div>
-                <div class="progressBar_progressBar__18WlE">
-                    <div class="progressBar_battery__2TZRX progressBar_battery_dark__3N_jI">
-                        <div class="progressBar_percentage__32Zhp progressBar_percentage_dark__p8Zjq" id="dayBar" style="width: 1%;"></div>
-                    </div>
-                    <p class="progressBar_progressText__1A3fz progressBar_progressText_dark__2rXAc" id="dayText">Day: 0%</p>
-                </div>
-                <div class="progressBar_progressBar__18WlE">
-                    <div class="progressBar_battery__2TZRX progressBar_battery_dark__3N_jI">
-                        <div class="progressBar_percentage__32Zhp progressBar_percentage_dark__p8Zjq" id="phdBar" style="width: 0%;"></div>
-                    </div>
-                    <p class="progressBar_progressText__1A3fz progressBar_progressText_dark__2rXAc" id="phdText">PhD: 0%</p>
+                    <p class="progressBar_progressText__1A3fz progressBar_progressText_dark__2rXAc" id="lifeText">Life: 0%</p>
                 </div>
             </div>
         </div>
-    </div>  
-    
+    </div>
     <script>
         function startbars(){
             var today = Date.now()
@@ -191,34 +191,31 @@
             var endOfYear = new Date(new Date().getFullYear(), 11, 31,23,59,59).getTime()
             var endOfYearPerc = Math.round(( (today-startOfYear)/(endOfYear-startOfYear)) *100)
 
-            var Fall2020 = new Date(2020,07,19)
-            var startOfSemester = Fall2020.getTime()
-            var Fall2020End = new Date(2020,11,12,23,59,59)
-            var endOfSemester= Fall2020End.getTime()
-            var endOfSemesterPerc = Math.round(( (today-startOfSemester)/(endOfSemester-startOfSemester)) *100)
+            var startOfMonth = new Date(2020,07,19).getTime()
+            var endOfMonth= new Date(2020,11,12,23,59,59).getTime()
+            var endOfMonthPerc = Math.round(( (today-startOfMonth)/(endOfMonth-startOfMonth)) *100)
 
             var startOfDay = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate()).getTime()
             var endOfDay= new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate(),23,59,59).getTime()
             var endOfDayPerc = Math.round(( (today-startOfDay)/(endOfDay-startOfDay)) *100)
 
-            var degree = new Date(2020,07,19)
-            var startOfPHD = degree.getTime()
-            var graduate = new Date(2024,04,0123,59,59)
-            var endOfPHD= graduate.getTime()
-            var endOfPHDPerc = Math.round(( (today-startOfPHD)/(endOfPHD-startOfPHD)) *100)
+            var birthday = new Date(2020,07,19)
+            var startOfLife = birthday.getTime()
+            var endOfLife = new Date(2024,04,05,23,59,59).getTime(); 
+            var endOfLifePerc = Math.round(( (today-startOfLife)/(endOfLife-startOfLife)) *100)
 
 
             document.getElementById('dayBar').style.width = endOfDayPerc+"%";
             document.getElementById('dayText').innerHTML = "Day: "+  endOfDayPerc+"%";
 
-            document.getElementById('semesterBar').style.width = endOfSemesterPerc+"%";
-            document.getElementById('semesterText').innerHTML = "Semester: "+  endOfSemesterPerc+"%";
+            document.getElementById('monthBar').style.width = endOfMonthPerc+"%";
+            document.getElementById('monthText').innerHTML = "Semester: "+  endOfMonthPerc+"%";
 
             document.getElementById('yearBar').style.width = endOfYearPerc+"%";
             document.getElementById('yearText').innerHTML = "Year: "+  endOfYearPerc+"%";
 
-            document.getElementById('phdBar').style.width = endOfPHDPerc+"%";
-            document.getElementById('phdText').innerHTML = "PhD: "+  endOfPHDPerc+"%";
+            document.getElementById('lifeBar').style.width = endOfLifePerc+"%";
+            document.getElementById('lifeText').innerHTML = "PhD: "+  endOfLifePerc+"%";
 
 
             var t = setTimeout(startbars, 15000);
