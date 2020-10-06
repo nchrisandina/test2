@@ -198,12 +198,9 @@
             var endOfDay= new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate(),23,59,59).getTime()
             var endOfDayPerc = Math.round(( (today-startOfDay)/(endOfDay-startOfDay)) *100)
 
-            var birthday = new Date(1989,04,18)
+            var birthday = new Date(2020,07,19)
             var startOfLife = birthday.getTime()
-
-            var endOfLifeCalc = birthday; 
-            endOfLifeCalc.setFullYear(birthday.getFullYear() + 90);
-            var endOfLife = endOfLifeCalc.getTime(); 
+            var endOfLife = new Date(2024,04,05,23,59,59).getTime(); 
             var endOfLifePerc = Math.round(( (today-startOfLife)/(endOfLife-startOfLife)) *100)
 
 
