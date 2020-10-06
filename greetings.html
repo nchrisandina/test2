@@ -190,8 +190,8 @@
             var endOfYear = new Date(new Date().getFullYear(), 11, 31,23,59,59).getTime()
             var endOfYearPerc = Math.round(( (today-startOfYear)/(endOfYear-startOfYear)) *100)
 
-            var startOfMonth = new Date(new Date().getFullYear(), new Date().getMonth()).getTime()
-            var endOfMonth= new Date(new Date().getFullYear(), new Date().getMonth()+1, 0,23,59,59).getTime()
+            var startOfMonth = new Date(2020,07,19).getTime()
+            var endOfMonth= new Date(2020,11,12,23,59,59).getTime()
             var endOfMonthPerc = Math.round(( (today-startOfMonth)/(endOfMonth-startOfMonth)) *100)
 
             var startOfDay = new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate()).getTime()
