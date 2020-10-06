@@ -186,8 +186,8 @@
         function startbars(){
             var today = Date.now()
 
-            var startOfYear = new Date(new Date().getFullYear(), 00, 01).getTime()
-            var endOfYear = new Date(new Date().getFullYear(), 12, 31,23,59,59).getTime()
+            var startOfYear = new Date(new Date().getFullYear(), 01, 01).getTime()
+            var endOfYear = new Date(new Date().getFullYear(), 12, 31).getTime()
             var endOfYearPerc = Math.round(( (today-startOfYear)/(endOfYear-startOfYear)) *100)
 
             var Fall2020 = new Date(2020,08,19)
