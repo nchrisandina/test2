@@ -154,18 +154,6 @@
 <body onload="startbars()">
     <div id="__next">
         <div class="progressBar_container__aolgv progressBar_container_dark__mpdSc">
-             <div class="progressBar_progressBar__18WlE">
-                    <div class="progressBar_battery__2TZRX progressBar_battery_dark__3N_jI">
-                        <div class="progressBar_percentage__32Zhp progressBar_percentage_dark__p8Zjq" id="dayBar" style="width: 1%;"></div>
-                    </div>
-                    <p class="progressBar_progressText__1A3fz progressBar_progressText_dark__2rXAc" id="dayText">Day: 0%</p>
-                </div>
-            <div class="progressBar_progressBar__18WlE">
-                    <div class="progressBar_battery__2TZRX progressBar_battery_dark__3N_jI">
-                        <div class="progressBar_percentage__32Zhp progressBar_percentage_dark__p8Zjq" id="semesterBar" style="width: 0%;"></div>
-                    </div>
-                    <p class="progressBar_progressText__1A3fz progressBar_progressText_dark__2rXAc" id="semesterText">Semester: 0%</p>
-                </div>
             <div class="progressBar_progressBar_group__3zJF-">
                 <div class="progressBar_progressBar__18WlE">
                     <div class="progressBar_battery__2TZRX progressBar_battery_dark__3N_jI">
@@ -175,13 +163,26 @@
                 </div>
                 <div class="progressBar_progressBar__18WlE">
                     <div class="progressBar_battery__2TZRX progressBar_battery_dark__3N_jI">
+                        <div class="progressBar_percentage__32Zhp progressBar_percentage_dark__p8Zjq" id="semesterBar" style="width: 0%;"></div>
+                    </div>
+                    <p class="progressBar_progressText__1A3fz progressBar_progressText_dark__2rXAc" id="semesterText">Semester: 0%</p>
+                </div>
+                <div class="progressBar_progressBar__18WlE">
+                    <div class="progressBar_battery__2TZRX progressBar_battery_dark__3N_jI">
+                        <div class="progressBar_percentage__32Zhp progressBar_percentage_dark__p8Zjq" id="dayBar" style="width: 1%;"></div>
+                    </div>
+                    <p class="progressBar_progressText__1A3fz progressBar_progressText_dark__2rXAc" id="dayText">Day: 0%</p>
+                </div>
+                <div class="progressBar_progressBar__18WlE">
+                    <div class="progressBar_battery__2TZRX progressBar_battery_dark__3N_jI">
                         <div class="progressBar_percentage__32Zhp progressBar_percentage_dark__p8Zjq" id="phdBar" style="width: 0%;"></div>
                     </div>
                     <p class="progressBar_progressText__1A3fz progressBar_progressText_dark__2rXAc" id="phdText">PhD: 0%</p>
                 </div>
             </div>
         </div>
-    </div>
+    </div>  
+    
     <script>
         function startbars(){
             var today = Date.now()
