@@ -187,13 +187,13 @@
         function startbars(){
             var today = Date.now()
 
-            var startOfYear = new Date(new Date().getFullYear(), 01, 01).getTime()
-            var endOfYear = new Date(new Date().getFullYear(), 12, 31).getTime()
+            var startOfYear = new Date(new Date().getFullYear(), 00, 01).getTime()
+            var endOfYear = new Date(new Date().getFullYear(), 11, 31,23,59,59).getTime()
             var endOfYearPerc = Math.round(( (today-startOfYear)/(endOfYear-startOfYear)) *100)
 
-            var Fall2020 = new Date(2020,08,19)
+            var Fall2020 = new Date(2020,07,19)
             var startOfSemester = Fall2020.getTime()
-            var Fall2020End = new Date(2020,12,12)
+            var Fall2020End = new Date(2020,11,12,23,59,59)
             var endOfSemester= Fall2020End.getTime()
             var endOfSemesterPerc = Math.round(( (today-startOfSemester)/(endOfSemester-startOfSemester)) *100)
 
@@ -201,9 +201,9 @@
             var endOfDay= new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate(),23,59,59).getTime()
             var endOfDayPerc = Math.round(( (today-startOfDay)/(endOfDay-startOfDay)) *100)
 
-            var degree = new Date(2020,08,19)
+            var degree = new Date(2020,07,19)
             var startOfPHD = degree.getTime()
-            var graduate = new Date(2024,05,01)
+            var graduate = new Date(2024,04,0123,59,59)
             var endOfPHD= graduate.getTime()
             var endOfPHDPerc = Math.round(( (today-startOfPHD)/(endOfPHD-startOfPHD)) *100)
 
